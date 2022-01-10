@@ -1,0 +1,89 @@
+.root {
+  font-style: normal;
+  font-family: inherit;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-size-adjust: 100%;
+}
+
+.h1 {
+  font-size: var(--text-h1-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.h2 {
+  font-size: var(--text-h2-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.h3 {
+  font-size: var(--text-h3-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.h4 {
+  font-size: var(--text-h4-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.h5 {
+  font-size: var(--text-h5-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.h6 {
+  font-size: var(--text-h6-size);
+  font-weight: var(--text-weight-medium);
+  margin: 0;
+}
+
+.body {
+  font-size: var(--text-body-size);
+  font-weight: var(--text-weight-regular);
+}
+
+.bodySmall {
+  font-size: var(--text-body-small-size);
+  font-weight: var(--text-weight-regular);
+}
+
+.subtitle {
+  font-size: var(--text-subtitle-size);
+  font-weight: var(--text-weight-medium);
+}
+
+.subtitleSmall {
+  font-size: var(--text-subtitle-small-size);
+  font-weight: var(--text-weight-medium);
+}
+
+.caption {
+  font-size: var(--text-caption-size);
+  font-weight: var(--text-weight-regular);
+}
+
+.captionSmall {
+  font-size: var(--text-caption-small-size);
+  font-weight: var(--text-weight-regular);
+}
+
+.medium {
+  font-weight: var(--text-weight-medium);
+}
+
+.bold {
+  font-weight: var(--text-weight-bold);
+}
+
+.light {
+  font-weight: var(--text-weight-light);
+}
+
+.regular {
+  font-weight: var(--text-weight-regular);
+}
