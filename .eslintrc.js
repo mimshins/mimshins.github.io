@@ -34,7 +34,8 @@ module.exports = {
     "no-console": "warn",
     "prefer-const": "error",
     "default-case": "warn",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "@next/next/no-img-element": "off"
   },
   overrides: [
     {
