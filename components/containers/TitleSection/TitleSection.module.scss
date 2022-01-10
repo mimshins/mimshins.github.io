@@ -1,0 +1,13 @@
+.root {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    height: 0.25rem;
+    width: 2.5rem;
+    background-color: var(--text-primary-color);
+  }
+}
