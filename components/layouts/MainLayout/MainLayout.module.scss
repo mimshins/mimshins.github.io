@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 105rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.grids {
+  z-index: 1010;
+}
+
+.branding {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 1020;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  z-index: 1020;
+}
+
+.nav {
+}
+
+.switch {
+  margin-top: 2rem;
+}
+
+.title {
+  position: absolute;
+  bottom: 3rem;
+  left: 14.4375rem;
+  z-index: 1020;
+
+  & > h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.main {
+  position: absolute;
+  top: 3rem;
+  left: 33.75rem;
+  right: 0;
+  bottom: 0;
+  z-index: 1010;
+}
