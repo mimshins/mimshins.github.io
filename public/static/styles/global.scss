@@ -1,0 +1,61 @@
+:root {
+  --background-color: #ffffff;
+  --primary-contrast-color: #ffffff;
+
+  --divider-color: rgba(0, 0, 0, 0.12);
+  --deco-box-color: rgba(255, 255, 255, 0.75);
+
+  --text-primary-color: #000000;
+  --text-secondary-color: rgba(0, 0, 0, 0.56);
+
+  --text-weight-bold: 700;
+  --text-weight-medium: 500;
+  --text-weight-regular: 400;
+  --text-weight-light: 300;
+
+  --text-h1-size: 3.5rem; // 56px
+  --text-h2-size: 3rem; // 48px
+  --text-h3-size: 2rem; // 32px
+  --text-h4-size: 1.5rem; // 24px
+  --text-h5-size: 1.25rem; // 20px
+  --text-h6-size: 1.125rem; // 18px
+
+  --text-subtitle-size: 1rem; // 16px
+  --text-subtitle-small-size: 0.875rem; // 14px
+  --text-body-size: 1rem; // 16px
+  --text-body-small-size: 0.875rem; // 14px
+  --text-caption-size: 0.75rem; // 12px
+  --text-caption-small-size: 0.625rem; // 10px
+}
+
+:root.dark-mode {
+  --primary-contrast-color: #000000;
+
+  --text-primary-color: #ffffff;
+  --text-secondary-color: rgba(255, 255, 255, 0.56);
+}
+
+html {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code";
+}
+
+.disable-user-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
