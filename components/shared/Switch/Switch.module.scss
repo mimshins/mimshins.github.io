@@ -1,0 +1,45 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  &.active {
+    .input {
+      background-color: var(--text-primary-color);
+    }
+
+    .indicator {
+      background-color: var(--primary-contrast-color);
+      transform: translateX(12px);
+    }
+  }
+}
+
+.input {
+  height: 0.875rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 0 1px var(--text-primary-color);
+  background-color: transparent;
+  position: relative;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 240ms ease-in-out;
+}
+
+.indicator {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: var(--text-primary-color);
+  position: absolute;
+  left: 0;
+  transform: translateX(2px);
+  transition: transform 240ms ease-in-out, background-color 240ms ease-in-out;
+}
+
+.label {
+  margin-right: 0.5rem;
+  font-weight: var(--text-weight-medium);
+}
