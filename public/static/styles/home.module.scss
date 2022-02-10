@@ -1,0 +1,103 @@
+@import "variables";
+
+.title {
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    font-size: var(--text-h6-size);
+  }
+}
+
+.subtitle {
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    font-size: var(--text-body-small-size);
+  }
+}
+
+.reference {
+  position: fixed;
+  right: var(--right-edge-position);
+  bottom: calc(var(--bottom-edge-position) + 0.75rem);
+  font-size: var(--text-caption-size);
+  font-weight: var(--text-weight-medium);
+  color: var(--text-secondary-color);
+
+  & > img {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    transform: translate(-2.5rem, 2px);
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    left: var(--box-leftEdge-position);
+    right: 0;
+    bottom: var(--bottom-edge-position);
+    height: 4px;
+    background-color: black;
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    &::after {
+      left: 25.75rem;
+    }
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    display: none;
+  }
+}
+
+.slogan {
+  position: fixed;
+  padding: 1rem;
+  border-top: 1px dashed var(--divider-color);
+  top: calc(var(--top-edge-position) + var(--row-3-relative-y));
+  left: var(--title-leftEdge-position);
+  width: calc(var(--box-leftEdge-position) - var(--title-leftEdge-position));
+
+  & > img {
+    position: fixed;
+    top: calc(var(--top-edge-position) + 1rem);
+    left: var(--box-leftEdge-position);
+    transform: translateX(-2rem);
+    width: 1rem;
+  }
+
+  & > strong {
+    font-size: var(--text-h6-size);
+  }
+
+  & > small {
+    font-size: var(--text-subtitle-small-size);
+    font-weight: var(--text-weight-light);
+  }
+
+  & > p {
+    font-size: var(--text-body-small-size);
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    left: var(--title-leftEdge-position);
+    top: auto;
+    bottom: calc(var(--bottom-edge-position) + 20rem);
+    background-color: rgba(255, 255, 255, 0.64);
+    border: none;
+    width: auto;
+    right: var(--right-edge-position);
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      transform: translateY(-2rem);
+      width: 1rem;
+    }
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    display: none;
+  }
+}
