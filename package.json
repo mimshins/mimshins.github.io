@@ -5,12 +5,10 @@
   "author": "mimshins <mostafa.sh.coderino@gmail.com>",
   "license": "MIT",
   "browserslist": [
-    "last 3 Chrome major versions",
-    "last 3 ChromeAndroid major versions",
-    "last 3 Firefox major versions",
-    "last 3 Edge major versions",
-    "last 3 Safari major versions",
-    "last 3 iOS major versions"
+    "cover 95%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
   ],
   "scripts": {
     "dev": "next dev",
@@ -51,9 +49,6 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": ">=6",
     "lint-staged": ">=12.1.7",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "^7.2.0",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   },
