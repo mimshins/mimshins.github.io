@@ -1,4 +1,4 @@
-/** @type {import('next/dist/next-server/server/config').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["jsx", "js", "mdx", "md", "ts", "tsx"],
   reactStrictMode: true,
