@@ -65,16 +65,6 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
           content="initial-scale=1.0, width=device-width, maximum-scale=5.0, minimum-scale=1.0"
           key="viewport"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <MainWrapper className={c({ "dark-mode": isDarkMode })}>
         {withPageLayout(<Page {...pageProps} />)}

@@ -11,7 +11,7 @@ const HomePage: NextPageWithLayout = () => {
     <>
       <Head>
         {setTitleMeta(
-          "[ HOME ] Mimshins: Creative experience designer and developer."
+          "HOME | Mimshins: Creative experience designer and developer."
         )}
         {setCanonicalMeta("https://mimsh.in")}
       </Head>
