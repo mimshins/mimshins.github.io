@@ -10,10 +10,11 @@ interface SwitchBaseProps {
   className?: string;
   checked?: boolean;
   defaultChecked?: boolean;
+  layout?: "vertical" | "horizontal";
   onChange?: (checked: boolean) => void;
 }
 
-type SwitchProps = Omit<
+export type SwitchProps = Omit<
   React.ComponentPropsWithRef<"div">,
   keyof SwitchBaseProps
 > &
@@ -27,6 +28,7 @@ const SwitchBase = (props: SwitchProps, ref: React.Ref<HTMLDivElement>) => {
     defaultChecked,
     onChange,
     className,
+    layout = "horizontal",
     ...otherProps
   } = props;
 
@@ -45,7 +47,9 @@ const SwitchBase = (props: SwitchProps, ref: React.Ref<HTMLDivElement>) => {
     <div
       id={id}
       ref={ref}
-      className={c(className, classes.root, { [classes.active]: isChecked })}
+      className={c(className, classes.root, classes[layout], {
+        [classes.active]: isChecked
+      })}
       {...otherProps}
     >
       <div

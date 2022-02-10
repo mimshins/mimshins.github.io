@@ -1,55 +1,31 @@
 .root {
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-}
-
-.leftEdge {
-  position: absolute;
-  left: 48px;
   top: 0;
   bottom: 0;
-  border-left: 1px dashed var(--divider-color);
+  z-index: 1010;
 }
 
-.titleEdge {
+.grid {
   position: absolute;
-  left: 231px;
-  top: 0;
-  bottom: 0;
-  border-left: 1px dashed var(--divider-color);
+  border-color: var(--divider-color);
+  border-width: 1px;
+  border-style: dashed;
 }
 
-.mainLeftEdge {
+.box {
   position: absolute;
-  left: 540px;
-  top: 0;
-  bottom: 0;
-  border-left: 1px dashed var(--divider-color);
-}
-
-.mainRightEdge {
-  position: absolute;
-  right: 48px;
-  top: 0;
-  bottom: 0;
-  border-left: 1px dashed var(--divider-color);
-}
-
-.mainBottomEdge {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 48px;
-  border-top: 1px dashed var(--divider-color);
-}
-
-.mainTopEdge {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 48px;
-  border-bottom: 1px dashed var(--divider-color);
+  &::before {
+    content: "";
+    display: block;
+    height: calc(100% - 2px);
+    border-color: var(--divider-color);
+    border-width: 1px;
+    border-style: dashed;
+    width: 0;
+  }
+  & > * {
+    @extend .grid;
+  }
 }

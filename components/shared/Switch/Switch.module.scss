@@ -1,7 +1,5 @@
 .root {
   display: inline-flex;
-  align-items: center;
-  flex-direction: row-reverse;
 
   &.active {
     .input {
@@ -10,8 +8,25 @@
 
     .indicator {
       background-color: var(--primary-contrast-color);
-      transform: translateX(12px);
+      transform: translateX(0.75rem);
     }
+  }
+}
+
+.vertical {
+  flex-direction: column-reverse;
+
+  & .label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.horizontal {
+  align-items: center;
+  flex-direction: row-reverse;
+
+  & .label {
+    margin-right: 0.5rem;
   }
 }
 
@@ -40,6 +55,5 @@
 }
 
 .label {
-  margin-right: 0.5rem;
   font-weight: var(--text-weight-medium);
 }

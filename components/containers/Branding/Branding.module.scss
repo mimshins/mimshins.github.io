@@ -1,9 +1,28 @@
+@import "../../../public/static/styles/variables";
+
 .root {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 1020;
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
 }
 
 .image {
-  width: 167px;
+  height: 1.25rem;
   margin-top: 1rem;
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    margin-top: 0;
+  }
 }

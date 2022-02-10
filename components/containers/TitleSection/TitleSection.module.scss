@@ -1,5 +1,14 @@
+@import "../../../public/static/styles/variables";
+
 .root {
-  position: relative;
+  position: absolute;
+  bottom: 3rem;
+  left: 14.4375rem;
+  z-index: 1020;
+
+  & > h1 {
+    margin-bottom: 2rem;
+  }
 
   &:before {
     content: "";
@@ -9,5 +18,14 @@
     height: 0.25rem;
     width: 2.5rem;
     background-color: var(--text-primary-color);
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    left: 8.6875rem;
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    left: 6.6875rem;
+    bottom: 1rem;
   }
 }

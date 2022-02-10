@@ -1,24 +1,24 @@
-import c from "classnames";
-import { Switch } from "components/shared";
+import Switch, { type SwitchProps } from "components/shared/Switch";
 import * as React from "react";
-import classes from "./DarkModeSwitch.module.scss";
 
 interface DarkModeSwitchProps {
   className?: string;
+  layout?: SwitchProps["layout"];
 }
 
 const DarkModeSwitchBase = (
   props: DarkModeSwitchProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-  const { className } = props;
+  const { className, layout = "horizontal" } = props;
 
   return (
     <Switch
-      className={c(className, classes.root)}
+      className={className}
       ref={ref}
+      layout={layout}
       id="dark-mode-switch"
-      label="DARK MODE"
+      label={layout === "horizontal" ? "DARK MODE" : "DARK\nMODE"}
     />
   );
 };

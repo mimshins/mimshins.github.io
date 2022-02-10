@@ -1,10 +1,4 @@
-import {
-  Branding,
-  DarkModeSwitch,
-  Grids,
-  Nav,
-  TitleSection
-} from "components/containers";
+import { Branding, Grids, Nav, TitleSection } from "components/containers";
 import * as React from "react";
 import classes from "./MainLayout.module.scss";
 
@@ -18,15 +12,10 @@ const MainLayout = (props: MainLayoutProps) => {
 
   return (
     <div id="layout" className={classes.root}>
-      <Grids className={classes.grids} />
-      <Branding className={classes.branding} />
-      <div className={classes.navbar}>
-        <Nav className={classes.nav} />
-        <DarkModeSwitch className={classes.switch} />
-      </div>
-      <TitleSection className={classes.title}>
-        {titleSectionContent}
-      </TitleSection>
+      <Grids />
+      <Branding />
+      <Nav />
+      <TitleSection>{titleSectionContent}</TitleSection>
       <main id="main" className={classes.main}>
         {children}
       </main>

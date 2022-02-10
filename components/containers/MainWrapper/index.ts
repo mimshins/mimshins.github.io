@@ -1,1 +1,5 @@
-export { default } from "./MainWrapper";
+export {
+  default,
+  MediaQueryContext,
+  type IMediaQueryContext
+} from "./MainWrapper";
