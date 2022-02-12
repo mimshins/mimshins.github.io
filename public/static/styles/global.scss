@@ -59,3 +59,21 @@ body {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
+
+#page-suspend-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 240ms ease, visibility 240ms ease;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}

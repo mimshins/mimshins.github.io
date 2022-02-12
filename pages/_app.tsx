@@ -18,6 +18,8 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
 
   const withPageLayout = getPageLayout();
 
+  const [isPageContentLoaded, setIsPageContentLoaded] = React.useState(false);
+
   // const isPageLoading = usePageState(state => state.isPageLoading);
   const setPageLoading = usePageState(state => state.setPageLoading);
 
@@ -41,6 +43,17 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
   }, []);
 
   React.useEffect(() => void smoothScroll.polyfill(), []);
+
+  React.useEffect(() => {
+    const handleLoad = () => {
+      requestAnimationFrame(
+        () => void setTimeout(() => void setIsPageContentLoaded(true), 500)
+      );
+    };
+
+    window.addEventListener("load", handleLoad);
+    return () => void window.removeEventListener("load", handleLoad);
+  }, []);
 
   return (
     <React.Fragment>
@@ -66,6 +79,10 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
           key="viewport"
         />
       </Head>
+      <div
+        id="page-suspend-overlay"
+        className={!isPageContentLoaded ? "open" : ""}
+      ></div>
       <MainWrapper className={c({ "dark-mode": isDarkMode })}>
         {withPageLayout(<Page {...pageProps} />)}
       </MainWrapper>
