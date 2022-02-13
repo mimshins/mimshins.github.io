@@ -1,6 +1,6 @@
 :root {
   --background-color: #ffffff;
-  --primary-contrast-color: #ffffff;
+  --primary-contrast-color: #000000;
 
   --divider-color: rgba(0, 0, 0, 0.12);
   --deco-box-color: rgba(255, 255, 255, 0.75);
@@ -29,7 +29,8 @@
 }
 
 :root.dark-mode {
-  --primary-contrast-color: #000000;
+  --background-color: #000000;
+  --primary-contrast-color: #ffffff;
 
   --text-primary-color: #ffffff;
   --text-secondary-color: rgba(255, 255, 255, 0.56);
@@ -71,6 +72,40 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 240ms ease, visibility 240ms ease;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#page-orientation-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  strong {
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-subtitle-size);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  span {
+    font-weight: var(--text-weight-light);
+    font-size: var(--text-body-small-size);
+  }
 
   &.open {
     opacity: 1;
