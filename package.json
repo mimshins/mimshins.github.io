@@ -20,6 +20,7 @@
   "dependencies": {
     "@utilityjs/use-controlled-prop": "^1.1.0",
     "@utilityjs/use-forked-refs": "^1.0.2",
+    "@utilityjs/use-is-mounted": "^1.0.2",
     "@utilityjs/use-media-query": "^1.0.0",
     "@utilityjs/use-on-change": "^1.0.3",
     "@utilityjs/use-resize-sensor": "^1.0.1",
@@ -30,6 +31,7 @@
     "platform": "^1.3.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
     "sass": "^1.47.0",
     "smoothscroll-polyfill": "^0.4.4",
     "zustand": "^3.6.9"
@@ -40,6 +42,7 @@
     "@types/platform": "^1.3.4",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/react-is": "^17.0.3",
     "@types/smoothscroll-polyfill": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
