@@ -22,8 +22,13 @@ const HomePage: NextPageWithLayout = () => {
         <br />
         [BEHANCE] 4AM SAATCHI & SAATCHI
       </div>
+      <div className={classes.referenceLine}></div>
+      <img
+        className={classes.crossImg}
+        src="/static/media/cross.svg"
+        aria-hidden="true"
+      />
       <div className={classes.slogan}>
-        <img src="/static/media/cross.svg" aria-hidden="true" />
         <strong>ARES</strong>
         <br />
         <small>IMPLEMENTATION</small>
