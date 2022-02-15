@@ -20,7 +20,7 @@
 
 .getInTouch {
   position: absolute;
-  top: var(--row-1-relative-y);
+  top: var(--row-2-relative-y);
   left: var(--col-2-relative-x);
   width: calc(4 * var(--cell-width));
 
@@ -139,7 +139,7 @@
 
 .follow {
   position: absolute;
-  top: var(--row-3-relative-y);
+  top: var(--row-4-relative-y);
   left: 0;
   padding-left: calc(2 * var(--cell-width));
 
