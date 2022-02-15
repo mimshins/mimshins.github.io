@@ -1,0 +1,270 @@
+@import "variables";
+
+.title {
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    font-size: var(--text-h6-size);
+    margin-bottom: 1rem !important;
+  }
+}
+
+.subtitle {
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    font-size: var(--text-body-small-size);
+  }
+}
+
+.link {
+  font-weight: var(--text-weight-medium);
+  color: var(--text-primary-color);
+}
+
+.getInTouch {
+  position: absolute;
+  top: var(--row-1-relative-y);
+  left: var(--col-2-relative-x);
+  width: calc(4 * var(--cell-width));
+
+  &::before {
+    content: "";
+    height: 4px;
+    width: calc(3 * var(--cell-width));
+    background-color: var(--primary-contrast-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  & > img {
+    width: 1.125rem;
+    height: 1.125rem;
+    transform: rotate(-180deg);
+    position: absolute;
+    top: 0.75rem;
+    right: var(--cell-width);
+  }
+
+  & > a > br {
+    display: none;
+  }
+
+  & > h2 {
+    margin-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    display: inline-block;
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 25vh;
+    padding-left: calc(
+      var(--title-leftEdge-position) - var(--left-edge-position)
+    );
+
+    &::before {
+      width: 1rem;
+      left: calc(var(--title-leftEdge-position) - var(--left-edge-position));
+    }
+
+    & > img {
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+      top: 0;
+    }
+
+    & > a {
+      font-size: var(--text-h2-size);
+    }
+
+    & > h2 {
+      background-color: transparent;
+      position: relative;
+      padding-top: 1rem;
+
+      &::before {
+        content: "";
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 0;
+        left: -5.625rem;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    margin-top: 12.5vh;
+
+    &::before {
+      width: 1rem;
+      left: 0;
+    }
+
+    & > img {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    & > h2 {
+      padding: 0.25rem;
+      font-size: var(--text-subtitle-size);
+    }
+
+    & > a {
+      font-size: var(--text-h3-size);
+      & > br {
+        display: initial;
+      }
+    }
+
+    @media (max-height: 640px) {
+      margin-top: 10vh;
+
+      & > h2 {
+        font-size: var(--text-subtitleSmall-size);
+      }
+
+      & > a {
+        font-size: var(--text-h4-size);
+      }
+    }
+  }
+}
+
+.follow {
+  position: absolute;
+  top: var(--row-3-relative-y);
+  left: 0;
+  padding-left: calc(2 * var(--cell-width));
+
+  & > img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: calc(1 * var(--cell-height));
+    left: calc(1 * var(--cell-width));
+  }
+
+  & > h2 {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--primary-contrast-color);
+      height: 4px;
+      top: 0;
+      left: calc(-2 * var(--cell-width));
+      width: var(--cell-width);
+    }
+
+    &::before {
+      content: "";
+      background-color: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: 0;
+      left: calc(-2 * var(--cell-width));
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 3rem;
+    padding-left: calc(
+      var(--title-leftEdge-position) - var(--left-edge-position)
+    );
+
+    & > img {
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(90deg);
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+
+    & > h2 {
+      &::after {
+        left: auto;
+        right: 0;
+        width: 0.25rem;
+      }
+
+      &::before {
+        top: 0;
+        height: 4px;
+        left: -5.625rem;
+        right: 0;
+        bottom: auto;
+      }
+    }
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    margin-top: 2rem;
+
+    @media (max-height: 640px) {
+      margin-top: 1rem;
+
+      & > h2 {
+        font-size: var(--text-subtitleSmall-size);
+      }
+
+      & > a {
+        font-size: var(--text-h4-size);
+      }
+    }
+  }
+}
+
+.byMe {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: var(--cell-width);
+  padding-bottom: 1rem;
+
+  & > p {
+    margin: 0;
+  }
+
+  & > img {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--primary-contrast-color);
+    right: 0;
+    left: 0;
+  }
+
+  @media (max-width: #{$breakpoint-lg - 0.05}) {
+    left: 40%;
+  }
+
+  @media (max-width: #{$breakpoint-sm - 0.05}) {
+    display: none;
+  }
+}
