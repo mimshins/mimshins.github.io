@@ -1,4 +1,6 @@
-import createStore, { State } from "zustand";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import createStore, { type State } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface PageState extends State {
   isPageLoading: boolean;
@@ -7,9 +9,20 @@ interface PageState extends State {
   setIsDarkMode: (isDarkMode: boolean) => void;
 }
 
-export const usePageState = createStore<PageState>(set => ({
-  isPageLoading: false,
-  isDarkMode: false,
-  setPageLoading: isPageLoading => set(() => ({ isPageLoading })),
-  setIsDarkMode: isDarkMode => set(() => ({ isDarkMode }))
-}));
+export const usePageState = createStore<PageState>(
+  persist(
+    set => ({
+      isPageLoading: false,
+      isDarkMode: false,
+      setPageLoading: isPageLoading => set(() => ({ isPageLoading })),
+      setIsDarkMode: isDarkMode => set(() => ({ isDarkMode }))
+    }),
+    {
+      name: "theme-mode-storage",
+      //@ts-ignore
+      partialize: state => ({
+        isDarkMode: state.isDarkMode
+      })
+    }
+  )
+);

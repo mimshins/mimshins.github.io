@@ -15,6 +15,11 @@
 .link {
   font-weight: var(--text-weight-medium);
   color: var(--text-primary-color);
+  transition: color 240ms ease;
+
+  &:hover {
+    color: var(--text-secondary-color);
+  }
 }
 
 .fullstack {
@@ -45,7 +50,7 @@
     margin-bottom: 2rem;
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--deco-box-color);
 
     &::before {
       content: "";
@@ -110,7 +115,7 @@
     right: -4px;
     top: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--deco-box-color);
   }
 
   & > h2 {
@@ -169,11 +174,11 @@
   top: var(--row-2-relative-y);
   right: calc(-1 * var(--right-edge-position));
   left: var(--col-5-relative-x);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--deco-box-color);
   padding: 0.5rem;
   font-size: var(--text-caption-small-size);
 
-  img {
+  svg {
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
@@ -267,7 +272,7 @@
     display: inline-block;
     margin: 0;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--deco-box-color);
   }
 
   &::after {
@@ -320,7 +325,7 @@
   display: flex;
   align-items: center;
 
-  & > img {
+  & > svg {
     width: 8px;
     margin-left: 8px;
   }

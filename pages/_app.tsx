@@ -18,11 +18,8 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
 
   const withPageLayout = getPageLayout();
 
-  // const isPageLoading = usePageState(state => state.isPageLoading);
   const setPageLoading = usePageState(state => state.setPageLoading);
-
   const isDarkMode = usePageState(state => state.isDarkMode);
-  // const setIsDarkMode = usePageState(state => state.setIsDarkMode);
 
   React.useEffect(() => {
     const routeChangeStart = () => setPageLoading(true);
@@ -41,6 +38,12 @@ const App = (props: AppPropsWithLayout): React.ReactNode => {
   }, []);
 
   React.useEffect(() => void smoothScroll.polyfill(), []);
+
+  React.useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.className = "dark-mode";
+    } else document.documentElement.className = "";
+  }, [isDarkMode]);
 
   return (
     <React.Fragment>

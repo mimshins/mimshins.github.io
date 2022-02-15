@@ -1,6 +1,6 @@
 import { MainLayout } from "components/layouts";
 import { Statue } from "components/partials/home";
-import { Text } from "components/shared";
+import { Text, Arrow, Cross } from "components/shared";
 import Head from "next/head";
 import classes from "public/static/styles/home.module.scss";
 import type { Layout, NextPageWithLayout } from "types.d";
@@ -17,17 +17,13 @@ const HomePage: NextPageWithLayout = () => {
       </Head>
       <Statue />
       <div className={classes.reference}>
-        <img src="/static/media/arrow.svg" aria-hidden="true" />
+        <Arrow />
         ART REFERENCE:
         <br />
         [BEHANCE] 4AM SAATCHI & SAATCHI
       </div>
       <div className={classes.referenceLine}></div>
-      <img
-        className={classes.crossImg}
-        src="/static/media/cross.svg"
-        aria-hidden="true"
-      />
+      <Cross className={classes.crossImg} />
       <div className={classes.slogan}>
         <strong>ARES</strong>
         <br />

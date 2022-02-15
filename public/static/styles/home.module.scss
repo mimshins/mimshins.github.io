@@ -18,7 +18,7 @@
   right: 0;
   bottom: 0;
   height: 4px;
-  background-color: black;
+  background-color: var(--primary-contrast-color);
 
   @media (max-width: #{$breakpoint-lg - 0.05}) {
     left: 25.75rem;
@@ -33,7 +33,7 @@
   font-weight: var(--text-weight-medium);
   color: var(--text-secondary-color);
 
-  & > img {
+  & > svg {
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -92,7 +92,7 @@
     top: auto;
     transform: none;
     bottom: 20rem;
-    background-color: rgba(255, 255, 255, 0.64);
+    background-color: var(--deco-box-color);
     border: none;
     width: auto;
   }

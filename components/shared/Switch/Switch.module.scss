@@ -3,12 +3,12 @@
 
   &.active {
     .input {
-      background-color: var(--text-primary-color);
+      background-color: var(--primary-contrast-color);
     }
 
     .indicator {
-      background-color: var(--primary-contrast-color);
       transform: translateX(0.75rem);
+      background-color: var(--background-color);
     }
   }
 }
@@ -35,7 +35,7 @@
   width: 1.5rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 0 1px var(--text-primary-color);
+  box-shadow: 0 0 0 1px #000000;
   background-color: transparent;
   position: relative;
   border-radius: 0.75rem;
@@ -47,7 +47,7 @@
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
-  background-color: var(--text-primary-color);
+  background-color: var(--primary-contrast-color);
   position: absolute;
   left: 0;
   transform: translateX(2px);

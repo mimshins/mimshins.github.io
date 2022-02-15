@@ -1,5 +1,5 @@
 import { MainLayout } from "components/layouts";
-import { Text } from "components/shared";
+import { Text, Arrow, Cross } from "components/shared";
 import Head from "next/head";
 import classes from "public/static/styles/contact.module.scss";
 import * as React from "react";
@@ -16,12 +16,7 @@ const ContactPage: NextPageWithLayout = () => {
         {setCanonicalMeta("https://mimsh.in/contact")}
       </Head>
       <div className={classes.getInTouch}>
-        <img
-          src="/static/media/arrow.svg"
-          alt="Arrow"
-          role="presentation"
-          aria-hidden="true"
-        />
+        <Arrow />
         <Text as="h2" variant="h5" weight="light">
           GET IN TOUCH
         </Text>
@@ -38,12 +33,7 @@ const ContactPage: NextPageWithLayout = () => {
         </Text>
       </div>
       <div className={classes.follow}>
-        <img
-          src="/static/media/arrow.svg"
-          alt="Arrow"
-          role="presentation"
-          aria-hidden="true"
-        />
+        <Arrow />
         <Text as="h2" variant="h5" weight="light">
           FOLLOW ME
         </Text>
@@ -93,12 +83,7 @@ const ContactPage: NextPageWithLayout = () => {
         </Text>
       </div>
       <div className={classes.byMe}>
-        <img
-          src="/static/media/cross.svg"
-          alt="Cross"
-          role="presentation"
-          aria-hidden="true"
-        />
+        <Cross />
         <Text as="p" variant="caption">
           DESIGN & DEVELOPED BY
           <br />

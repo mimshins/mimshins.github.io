@@ -1,5 +1,5 @@
 import c from "classnames";
-import Text from "components/shared/Text";
+import { Text, LogoType } from "components/shared";
 import * as React from "react";
 import classes from "./Branding.module.scss";
 
@@ -22,12 +22,7 @@ const Branding = (props: BrandingProps) => {
         <br />
         MOSTAFA SHAMSITABAR
       </Text>
-      <img
-        className={classes.image}
-        src="/static/media/mimshins-type.svg"
-        alt="MIMSHINS Logo Type"
-        title="MIMSHINS Logo Type"
-      />
+      <LogoType className={classes.image} />
     </header>
   );
 };

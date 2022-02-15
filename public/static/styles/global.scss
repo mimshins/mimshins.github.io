@@ -3,7 +3,7 @@
   --primary-contrast-color: #000000;
 
   --divider-color: rgba(0, 0, 0, 0.12);
-  --deco-box-color: rgba(255, 255, 255, 0.75);
+  --deco-box-color: rgba(255, 255, 255, 0.7);
 
   --text-primary-color: #000000;
   --text-secondary-color: rgba(0, 0, 0, 0.56);
@@ -29,11 +29,20 @@
 }
 
 :root.dark-mode {
-  --background-color: #000000;
+  --background-color: #252525;
   --primary-contrast-color: #ffffff;
 
-  --text-primary-color: #ffffff;
+  --divider-color: rgba(255, 255, 255, 0.12);
+  --deco-box-color: rgba(0, 0, 0, 0.56);
+
+  --text-primary-color: rgba(255, 255, 255, 0.87);
   --text-secondary-color: rgba(255, 255, 255, 0.56);
+}
+
+body {
+  color: var(--text-primary-color);
+  background-color: var(--background-color);
+  transition: color 240ms ease, background-color 240ms ease;
 }
 
 html {

@@ -1,6 +1,6 @@
 import { MainLayout } from "components/layouts";
 import { Slide, Slider } from "components/partials/about";
-import { Text } from "components/shared";
+import { Arrow, ArrowRight, Text } from "components/shared";
 import Head from "next/head";
 import Link from "next/link";
 import classes from "public/static/styles/about.module.scss";
@@ -73,12 +73,7 @@ const AboutPage: NextPageWithLayout = () => {
         </Text>
       </div>
       <div className={classes.letsPlay}>
-        <img
-          src="/static/media/arrow.svg"
-          alt="Decorative Arrow"
-          role="presentation"
-          aria-hidden="true"
-        />
+        <Arrow />
         <Text variant="captionSmall" as="p">
           I&apos;M ALWAYS LOOKING FOR NEW PEOPLE TO PUSH ME TO BE MORE CREATIVE.
           AFTER ALL &quot;PLAYING NEW&quot; MEANS FINDING NEW WAYS TO REDEFINE
@@ -123,12 +118,7 @@ const AboutPage: NextPageWithLayout = () => {
             onClick={() => void setSlideIdx(idx => (idx + 1) % 3)}
           >
             <span>NEXT</span>
-            <img
-              src="/static/media/arrow-right.svg"
-              alt="Arrow"
-              role="presentation"
-              aria-hidden="true"
-            />
+            <ArrowRight />
           </div>
         </div>
         <Slider slideIndex={slideIdx}>
