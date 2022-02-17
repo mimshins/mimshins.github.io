@@ -18,6 +18,13 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="preload"
+            as="image"
+            href="/static/media/bg-texture-dark.jpg"
+          />
+          <link rel="preload" as="image" href="/static/media/bg-texture.jpg" />
+          <link rel="preload" as="image" href="/static/media/ares.png" />
           <meta name="application-name" content={appName} />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
