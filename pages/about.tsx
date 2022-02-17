@@ -31,7 +31,7 @@ const AboutPage: NextPageWithLayout = () => {
           JAVASCRIPT ENGINEER
         </Text>
         <Text variant="subtitle" as="p" weight="regular">
-          WHO WORKS AT THE INTERSECTION OF DESIGN & TECHNOLOGY.
+          WORKING AT THE INTERSECTION OF DESIGN & TECHNOLOGY.
           <br />
           <br />
           I BUILD PRODUCT THAT SUPPORTS THE USER/CUSTOMER EXPERIENCE;
@@ -41,7 +41,7 @@ const AboutPage: NextPageWithLayout = () => {
             MOSTLY I SOLVE PROBLEMS.
           </Text>
           <br />
-          <br />I HAVE A MINIMALISTIC YET MODERN & FUTURISTIC DESIGN STYLE.
+          <br />I HAVE A MINIMALISTIC, MODERN & FUTURISTIC DESIGN STYLE.
         </Text>
       </div>
       <div className={classes.currently}>
@@ -129,7 +129,7 @@ const AboutPage: NextPageWithLayout = () => {
               JAVASCRIPT ENGINEER
             </Text>
             <Text variant="bodySmall" as="p" weight="regular">
-              WHO WORKS AT THE INTERSECTION OF DESIGN & TECHNOLOGY.
+              WORKING AT THE INTERSECTION OF DESIGN & TECHNOLOGY.
               <br />
               <br />
               I BUILD PRODUCT THAT SUPPORTS THE USER/CUSTOMER EXPERIENCE;
@@ -139,7 +139,7 @@ const AboutPage: NextPageWithLayout = () => {
                 MOSTLY I SOLVE PROBLEMS.
               </Text>
               <br />
-              <br />I HAVE A MINIMALISTIC YET MODERN & FUTURISTIC DESIGN STYLE.
+              <br />I HAVE A MINIMALISTIC, MODERN & FUTURISTIC DESIGN STYLE.
             </Text>
           </Slide>
           <Slide>
