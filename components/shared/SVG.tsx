@@ -40,6 +40,7 @@ export const ArrowRight = (props: SVGProps) => {
       focusable="false"
       aria-hidden="true"
       className={clx(className, classes.stroke)}
+      fill="none"
       {...otherProps}
     >
       <path
